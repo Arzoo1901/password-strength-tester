@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Strength Tester</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Password Strength Tester</h1>
+    <input type="password" id="passwordInput" placeholder="Enter your password" />
+    <br>
+    <label>
+        <input type="checkbox" id="showPassword" /> Show Password
+    </label>
+
+    <div id="strengthMessage"></div>
+    <div id="criteriaList">
+      <p id="length">✅ 8+ characters</p>
+      <p id="upper">✅ Uppercase letter</p>
+      <p id="lower">✅ Lowercase letter</p>
+      <p id="number">✅ Number</p>
+      <p id="special">✅ Special character</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
