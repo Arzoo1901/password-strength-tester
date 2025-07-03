@@ -42,8 +42,3 @@ input[type="password"] {
 #criteriaList p.invalid {
   color: #ff4444;
 }
-
-label {
-  font-size: 14px;
-  color: #ccc;
-}

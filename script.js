@@ -40,8 +40,3 @@ input.addEventListener("input", () => {
   message.style.color = ["#ff4444", "#ff5544", "#ffaa00", "#cccc00", "#00ff66", "#00ffcc"][score];
 });
 
-const toggle = document.getElementById("showPassword");
-
-toggle.addEventListener("change", () => {
-  input.type = toggle.checked ? "text" : "password";
-});
