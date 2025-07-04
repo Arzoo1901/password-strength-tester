@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Password Strength Tester</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -12,11 +14,13 @@
     <input type="password" id="passwordInput" placeholder="Enter your password" />
     <div id="strengthMessage"></div>
     <div id="criteriaList">
-      <p id="length">✅ 8+ characters</p>
-      <p id="upper">✅ Uppercase letter</p>
-      <p id="lower">✅ Lowercase letter</p>
-      <p id="number">✅ Number</p>
-      <p id="special">✅ Special character</p>
+      <p id="length"><span class="icon">❌</span>8+ characters</p>
+      <p id="upper"><span class="icon">❌</span>Uppercase letter</p>
+      <p id="lower"><span class="icon">❌</span>Lowercase letter</p>
+      <p id="number"><span class="icon">❌</span>Number</p>
+      <p id="special"><span class="icon">❌</span>Special character</p>
+      <p id="crackTime" style="margin-top: 10px; font-style: italic;"></p>
+      <button onclick="prepareReport()">📝 Generate Security Report</button>
     </div>
   </div>
   <script src="script.js"></script>
